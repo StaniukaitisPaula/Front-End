@@ -8,7 +8,7 @@ function somar() {
     const nota2 = Number(document.getElementById('nota2').value)
     const resultado = document.getElementById('resultado')
     const formulario = document.getElementById('form')
-   
+
     const media = (nota1 + nota2) / 2
 
 
