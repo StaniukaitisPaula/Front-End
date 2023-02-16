@@ -12,13 +12,15 @@ form {
     justify-content: space-evenly;
     margin: auto;
     padding: 12px;
-    box-shadow: 0px 0px 12px black;
+    box-shadow: 0px 0px 12px ;
 }
 
-.sombraAzul {
-    box-shadow: 0px 0px 12px royalblue;
+.notaAzul {
+    
+    box-shadow: 0px 0px 12px blue;
 }
 
-.sombraVermelha {
+.notaVermelha {
     box-shadow: 0px 0px 12px red;
+   
 }
