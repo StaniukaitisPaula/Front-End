@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12vh;
+    gap: 5vw;
+}
+
+.preencherDados {
+    font-family: 'Inter', sans-serif;
+    background-color: #ECCEA7;
+    width: 375px;
+    height: 417px;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.round {
+    background-color: #FA9E27;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container {
+    display: flex;
+    align-items: center;
+}
+
+path {
+    fill: #ECCEA7;
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: .5s;
+    ;
+}
+
+path:hover {
+    fill: #FA9E27;
+}
