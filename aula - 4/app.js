@@ -7,18 +7,11 @@ const getEstado =  async( {target} ) => {
     const estado = target.id.replace('BR-', '')
     // const nomeEstado = target.getAttribute('title')
     const dadosEstado = await preencherDados(estado)
+    const regiaoCapital = await dadosCidades(estado)
 
 
     preencherTela(dadosEstado)
-
-}
-const getcidade =  async( {target} ) => { 
-    const estado = target.id.replace('BR-', '')
-    const dadosEstado = await dadosCidades(estado)
-
-
-    preencherTela(dadosEstado)
-
+    preencherTela(regiaoCapital)
 }
 
 const preencherDados = async (sigla) => {
@@ -62,6 +55,7 @@ const preencherTela = async(dadosEstado) => {
     descriptionContent.classList.add('content__description')
 
     const capital = document.createElement('div')
+    capital.textContent = 'Capital:'
     capital.classList.add('capital')
 
     const nameCapital = document.createElement('span')
@@ -69,6 +63,7 @@ const preencherTela = async(dadosEstado) => {
     nameCapital.textContent = dadosEstado.capital
 
     const regiao = document.createElement('div')
+    regiao.textContent = 'Região:'
     regiao.classList.add('regiao')
 
     const nameRegiao = document.createElement('span')
@@ -79,7 +74,7 @@ const preencherTela = async(dadosEstado) => {
     contentCard.classList.add('card__content')
 
     const spanCidades = document.createElement('span')
-    spanCidades.textContent = 'CIDADES'
+    spanCidades.textContent = 'CIDADES:'
     spanCidades.classList.add('cidContent')
 
     const contentCidades = document.createElement('div')

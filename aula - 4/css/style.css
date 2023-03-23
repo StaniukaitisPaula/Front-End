@@ -67,12 +67,12 @@ path:hover{
     color: white;
 }
 
-.capital__name::before{
+.capital{
     content: 'CAPITAL: ';
     font-weight: 900;
 }
 
-.regiao__name::before{
+.regiao{
     content: 'REGIÃO: ';
     font-weight: 900;
 }
