@@ -1,12 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
-
-.map-container{
+.map-container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,7 +14,7 @@
     gap: 64px;
 }
 
-path{
+path {
     fill: #ECCEA7;
     stroke: #fff;
     stroke-width: 2px;
@@ -23,12 +22,11 @@ path{
     transition: all 0.2s;
 }
 
-path:hover{
+path:hover {
     fill: #FA9E27;
 }
 
-
-.card-dados{
+.card-dados {
     width: 500px;
     height: 500px;
     background: #F5E7D3;
@@ -36,10 +34,9 @@ path:hover{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-  
-    }
+}
 
-.card__header{
+.card__header {
     display: flex;
     width: 100%;
     align-items: center;
@@ -47,13 +44,13 @@ path:hover{
     gap: 32px;
 }
 
-.content__title{
+.content__title {
     color: #FA9E27;
     font-weight: 900;
     font-size: 2rem;
 }
 
-.header__uf{
+.header__uf {
     width: 120px;
     height: 120px;
     display: flex;
@@ -67,17 +64,17 @@ path:hover{
     color: white;
 }
 
-.capital{
+.capital {
     content: 'CAPITAL: ';
     font-weight: 900;
 }
 
-.regiao{
+.regiao {
     content: 'REGIÃO: ';
     font-weight: 900;
 }
 
-.card__content{
+.card__content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -87,7 +84,7 @@ path:hover{
     gap: 16px;
 }
 
-.cidContent{
+.cidContent {
     display: flex;
     justify-content: flex-start;
     font-size: 1.5rem;
@@ -95,24 +92,27 @@ path:hover{
     color: black;
 }
 
-.cidades-content{
+.cidades-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 300px;
-   
     height: 250px;
     flex-wrap: nowrap;
     overflow-y: scroll;
     display: grid;
-
 }
 
-.content__cidade{
+.content__cidade {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.content__description {
+    display: grid;
+    padding: 10px;
 }

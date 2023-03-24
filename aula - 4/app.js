@@ -3,9 +3,9 @@
 const mapa = document.querySelector('#map')
 
 
-const getEstado =  async( {target} ) => { 
+const getEstado = async({ target }) => {
     const estado = target.id.replace('BR-', '')
-    // const nomeEstado = target.getAttribute('title')
+        // const nomeEstado = target.getAttribute('title')
     const dadosEstado = await preencherDados(estado)
     const regiaoCapital = await dadosCidades(estado)
 
@@ -14,16 +14,16 @@ const getEstado =  async( {target} ) => {
     preencherTela(regiaoCapital)
 }
 
-const preencherDados = async (sigla) => {
+const preencherDados = async(sigla) => {
 
     const url = `http://localhost:8080/v1/senai/cidades?uf=${sigla}`
-    const response =  await fetch(url)
+    const response = await fetch(url)
     const data = await response.json()
 
     return data
 
 }
-const dadosCidades = async (estado) => {
+const dadosCidades = async(estado) => {
     const url = `http://localhost:8080/v1/senai/estado/sigla/${estado}`;
 
     const response = await fetch(url);
@@ -32,9 +32,9 @@ const dadosCidades = async (estado) => {
     return {
         capital: data.capital,
         regiao: data.regiao,
-      }
-    
-  }
+    }
+
+}
 const preencherTela = async(dadosEstado) => {
 
     const headerCard = document.createElement('div')
@@ -74,13 +74,13 @@ const preencherTela = async(dadosEstado) => {
     contentCard.classList.add('card__content')
 
     const spanCidades = document.createElement('span')
-    spanCidades.textContent = 'CIDADES:'
+    spanCidades.textContent = 'Cidades:'
     spanCidades.classList.add('cidContent')
 
     const contentCidades = document.createElement('div')
     contentCidades.classList.add('cidades-content')
 
-    dadosEstado.cidades.forEach(function(cidade){
+    dadosEstado.cidades.forEach(function(cidade) {
         const cidadeContent = document.createElement('span')
         cidadeContent.classList.add('content__cidade')
         cidadeContent.textContent = cidade
@@ -94,11 +94,11 @@ const preencherTela = async(dadosEstado) => {
     descriptionContent.append(capital, regiao)
     contentHeader.append(titleContent, descriptionContent);
     headerCard.append(titleH, contentHeader)
- 
+
 
     const card = document.getElementById('card-dados')
     card.replaceChildren(headerCard, contentCard)
-    
+
 
 }
 
