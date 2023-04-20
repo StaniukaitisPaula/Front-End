@@ -31,7 +31,7 @@ const carregarProdutos = () => {
     const container = document.getElementById('container')
     const cards = produtos.map(criarCard)
 
-    container.replaceChild(...cards)
+    container.append(...cards)
 }
 
 
