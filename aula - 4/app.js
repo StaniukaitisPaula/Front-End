@@ -7,18 +7,22 @@ const getEstado = async({ target }) => {
     const estado = target.id.replace('BR-', '')
         // const nomeEstado = target.getAttribute('title')
     const dadosEstado = await preencherDados(estado)
-    const regiaoCapital = await dadosCidades(estado)
+    console.log(dadosEstado);
+    // const regiaoCapital = await dadosCidades(estado)
 
 
     preencherTela(dadosEstado)
-    preencherTela(regiaoCapital)
+    // preencherTela(regiaoCapital)
 }
 
 const preencherDados = async(sigla) => {
 
     const url = `http://localhost:8080/v1/senai/cidades?uf=${sigla}`
+    console.log(url);
     const response = await fetch(url)
     const data = await response.json()
+
+    console.log(data);
 
     return data
 
@@ -61,6 +65,8 @@ const preencherTela = async(dadosEstado) => {
     const nameCapital = document.createElement('span')
     nameCapital.classList.add('capital__name')
     nameCapital.textContent = dadosEstado.capital
+
+    // console.log(dadosEstado);
 
     const regiao = document.createElement('div')
     regiao.textContent = 'Região:'
